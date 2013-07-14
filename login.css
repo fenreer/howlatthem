@@ -1,0 +1,40 @@
+html, body {
+    background: rgb(51, 51, 51) !important;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    color: #BE0000 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+}
+
+.message,
+#login_error {
+    display: none !important; 
+}
+
+#login h1 a {
+    background-image: url('images/sidebar.png');
+    height: 280px;
+    width: 220px;
+    background-size:  220px 280px;
+    margin: 0 auto;
+}
+
+#loginform,
+#registerform {
+    margin-top: -90px;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+#loginform input,
+#loginform button,
+#registerform input,
+#registerform button {
+    border-radius: 0px;
+}
+
