@@ -1,4 +1,4 @@
-hat
+howlatthem.com
 ===
 
-howlatthem.com
+The WordPress theme behind howlatthem.com
