@@ -92,135 +92,150 @@ class Official
 			'autosave' => true,
 			'fields' => array (
 				array (
-					'name' => __ ('Level of Support', 'hat'),
-					'id' => 'official_support',
-					'type' => 'text' 
+					'name' => __ ('First name', 'hat'),
+					'id' => self::META_NAME_FIRST,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Candidate ID', 'hat'),
-					'id' => "official_id_candidate",
-					'type' => 'text' 
-				),
-				array (
-					'name' => __ ('Office State ID', 'hat'),
-					'id' => "official_id_office_state",
-					'type' => 'text' 
+					'name' => __ ('Last name', 'hat'),
+					'id' => self::META_NAME_LAST,
+					'type' => 'text'
 				),
 				array (
 					'name' => __ ('Office Parties', 'hat'),
-					'id' => "official_office_parties",
-					'type' => 'text' 
+					'id' => self::META_OFFICE_PARTIES,
+					'type' => 'text'
 				),
 				array (
 					'name' => __ ('Title', 'hat'),
-					'id' => "official_title",
-					'type' => 'text' 
+					'id' => self::META_OFFICE_TITLE,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('First Name', 'hat'),
-					'id' => "official_first_name",
-					'type' => 'text' 
+					'name' => __ ('Office type', 'hat'),
+					'id' => self::META_OFFICE_TYPE,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Last Name', 'hat'),
-					'id' => "official_last_name",
-					'type' => 'text' 
+					'name' => __ ('Office level', 'hat'),
+					'id' => self::META_OFFICE_LEVEL,
+					'type' => 'text'
 				),
 				array (
 					'name' => __ ('District', 'hat'),
-					'id' => "official_district",
-					'type' => 'text' 
+					'id' => self::META_DISTRICT,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Office Type ID', 'hat'),
-					'id' => "official_id_office_type",
-					'type' => 'text' 
+					'name' => __ ('District phone 1', 'hat'),
+					'id' => self::META_DISTRICT_PHONE_1,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Office Level ID', 'hat'),
-					'id' => "official_id_office_level",
-					'type' => 'text' 
+					'name' => __ ('District phone 2', 'hat'),
+					'id' => self::META_DISTRICT_PHONE_2,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('District Phone 1', 'hat'),
-					'id' => "official_district_phone_1",
-					'type' => 'text' 
+					'name' => __ ('District  fax 1', 'hat'),
+					'id' => self::META_DISTRICT_FAX_1,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('District Phone 2', 'hat'),
-					'id' => "official_district_phone_2",
-					'type' => 'text' 
+					'name' => __ ('District fax 2', 'hat'),
+					'id' => self::META_DISTRICT_FAX_2,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('District Fax 1', 'hat'),
-					'id' => "official_district_fax_1",
-					'type' => 'text' 
+					'name' => __ ('District street', 'hat'),
+					'id' => self::META_DISTRICT_STREET,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('District Fax 2', 'hat'),
-					'id' => "official_district_fax_2",
-					'type' => 'text' 
+					'name' => __ ('District city', 'hat'),
+					'id' => self::META_DISTRICT_CITY,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('District Street', 'hat'),
-					'id' => "official_district_street",
-					'type' => 'text' 
+					'name' => __ ('District state', 'hat'),
+					'id' => self::META_DISTRICT_STATE,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('District City', 'hat'),
-					'id' => "official_district_city",
-					'type' => 'text' 
+					'name' => __ ('District ZIP', 'hat'),
+					'id' => self::META_DISTRICT_ZIP,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('District State', 'hat'),
-					'id' => "official_district_state",
-					'type' => 'text' 
+					'name' => __ ('Office phone 1', 'hat'),
+					'id' => self::META_OFFICE_PHONE_1,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('District Zip', 'hat'),
-					'id' => "official_district_zip",
-					'type' => 'text' 
+					'name' => __ ('Office phone 2', 'hat'),
+					'id' => self::META_OFFICE_PHONE_2,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Capitol Phone 1', 'hat'),
-					'id' => "official_capitol_phone_1",
-					'type' => 'text' 
+					'name' => __ ('Office fax 1', 'hat'),
+					'id' => self::META_OFFICE_FAX_1,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Capitol Phone 2', 'hat'),
-					'id' => "official_capitol_phone_2",
-					'type' => 'text' 
+					'name' => __ ('Office fax 2', 'hat'),
+					'id' => self::META_OFFICE_FAX_2,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Capitol Fax 1', 'hat'),
-					'id' => "official_capitol_fax_1",
-					'type' => 'text' 
+					'name' => __ ('Office street', 'hat'),
+					'id' => self::META_OFFICE_STREET,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Capitol Fax 2', 'hat'),
-					'id' => "official_capitol_fax_2",
-					'type' => 'text' 
+					'name' => __ ('Office city', 'hat'),
+					'id' => self::META_OFFICE_CITY,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Office Street', 'hat'),
-					'id' => "official_office_street",
-					'type' => 'text' 
+					'name' => __ ('Office state', 'hat'),
+					'id' => self::META_OFFICE_STATE,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Office City', 'hat'),
-					'id' => "official_office_city",
-					'type' => 'text' 
+					'name' => __ ('Office ZIP', 'hat'),
+					'id' => self::META_OFFICE_ZIP,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Office State', 'hat'),
-					'id' => "official_office_state",
-					'type' => 'text' 
+					'name' => __ ('Ideology', 'hat'),
+					'id' => self::META_IDEOLOGY,
+					'type' => 'text'
 				),
 				array (
-					'name' => __ ('Office Zip', 'hat'),
-					'id' => "official_office_zip",
-					'type' => 'text' 
-				) 
+					'name' => __ ('Opposes Citizens United', 'hat'),
+					'id' => self::META_OPPOSES_CITIZENS_UNITED,
+					'type' => 'text'
+				),
+				array (
+					'name' => __ ('Voted For Resolution', 'hat'),
+					'id' => self::META_VOTE_RESOLUTION,
+					'type' => 'text'
+				),
+				array (
+					'name' => __ ('Co-Authored/Sponsored Resolution for Admendment', 'hat'),
+					'id' => self::META_VOTE_SPONSOR,
+					'type' => 'text'
+				),
+				array (
+					'name' => __ ('Voted for article 5 convention', 'hat'),
+					'id' => self::META_VOTE_CONVENTION,
+					'type' => 'text'
+				),
+				array (
+					'name' => __ ('User feedback rating', 'hat'),
+					'id' => self::META_FEEDBACK_RATING,
+					'type' => 'text'
+				)
 			) 
 		));
 	}
