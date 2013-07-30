@@ -1,5 +1,8 @@
 <?
+
 global $wp_query;
+
+$random_avatar = get_template_directory_uri() . '/images/avatar-' . rand (1,13) . '.jpg';
 
 $hat_officials_pagination = array (
 	'base' => str_replace (9999, '%#%', esc_url (get_pagenum_link (9999))),
@@ -84,6 +87,53 @@ $hat_officials_pagination = array (
 			</tr>
 		</tfoot>
 		<tbody>
+            <tr>
+                <td><span class="official-rank-0"></span></td>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2"><img src="<?= $random_avatar ?>" alt="Avatar" height="60px" width="60px" /></td>
+                                <td>Title</td>
+                                <td>First Name</td>
+                                <td>Last Name</td>
+                            </tr>
+                            <tr>
+                                <td>Office Parties</td>
+                                <td>State</td>
+                                <td>District</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Office Phone 1</td>
+                            <td>555-555-5555</td>
+                        </tr>
+                        <tr>
+                            <td>Office Phone 1</td>
+                            <td>555-555-5555</td>
+                        </tr>
+                        <tr>
+                            <td>District Phone 1</td>
+                            <td>555-555-5555</td>
+                        </tr>
+                        <tr>
+                            <td>District Phone 1</td>
+                            <td>555-555-5555</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <span class="official-icon-ideology"></span>
+                    <span class="official-icon-opposes"></span>
+                    <span class="official-icon-vote-resolution"></span>
+                    <span class="official-icon-vote-sponsor"></span>
+                    <span class="official-icon-vote-convention"></span>
+                </td>
+            </tr>
 		<? while (have_posts ()): the_post (); ?>
 			<tr>
 				<td>Ranking</td>
