@@ -2,7 +2,6 @@
 
 class Official
 {
-
 	const POST_TYPE = 'official';
 	
 	const IMAGESIZE_AVATAR = 'official-avatar';
@@ -35,7 +34,7 @@ class Official
 	const META_VOTE_RESOLUTION = 'vote_resolution';
 	const META_VOTE_SPONSOR = 'vote_sponsor';
 	const META_VOTE_CONVENTION = 'vote_convention';
-	const META_FEEDBACK_RATING = 'feedback_rating';
+	const META_RANK = 'feedback_rating';
 	
 	public $meta_boxes = array ();
 
@@ -233,7 +232,7 @@ class Official
 				),
 				array (
 					'name' => __ ('User feedback rating', 'hat'),
-					'id' => self::META_FEEDBACK_RATING,
+					'id' => self::META_RANK,
 					'type' => 'text'
 				)
 			) 

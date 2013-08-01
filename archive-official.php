@@ -16,7 +16,7 @@ $hat_officials_pagination = array (
 <? get_header (); ?>
 <section>
 
-	<form id="filter-officials" method="get" action="<?= esc_url (get_post_type_archive_link ('official')); ?>">
+    <form id="filter-officials" method="get" action="<?= esc_url (get_post_type_archive_link ('official')); ?>">
 		<ul>
 			<li>
 				<label for="official_first_name">
@@ -73,58 +73,39 @@ $hat_officials_pagination = array (
 		<thead>
 			<tr>
 				<td><i class="icon-th"></i></td>
-				<td><? _e ('Official Profile','hat'); ?></td>
-				<td><? _e ('Contact Information','hat'); ?></td>
-				<td><? _e ('Official Support', 'hat'); ?></td>
+				<td><? _e ('Profile','hat'); ?></td>
+				<td><? _e ('Contact','hat'); ?></td>
+				<td><? _e ('Support', 'hat'); ?></td>
 			</tr>
 		</thead>
 		<tfoot>
 			<tr>
 				<td><i class="icon-th"></i></td>
-				<td><? _e ('Official Profile','hat'); ?></td>
-				<td><? _e ('Contact Information','hat'); ?></td>
-				<td><? _e ('Official Support', 'hat'); ?></td>
+				<td><? _e ('Profile','hat'); ?></td>
+				<td><? _e ('Contact','hat'); ?></td>
+				<td><? _e ('Support', 'hat'); ?></td>
 			</tr>
 		</tfoot>
 		<tbody>
+		<? while (have_posts ()): the_post (); ?>
             <tr>
-                <td><span class="official-rank-0"></span></td>
+                <td><span class="<?= the_official_rank (); ?>"></span></td>
                 <td>
                     <table>
                         <tbody>
                             <tr>
-                                <td rowspan="2"><img src="<?= $random_avatar ?>" alt="Avatar" height="60px" width="60px" /></td>
-                                <td>Title</td>
-                                <td>First Name</td>
-                                <td>Last Name</td>
+                                <td><? the_official_name (); ?></td>
+                                <td colspan="2"><? the_official_parties (); ?></td>
                             </tr>
                             <tr>
-                                <td>Office Parties</td>
-                                <td>State</td>
-                                <td>District</td>
-                            </tr>
+                                <td colspan="2"><? the_official_title (); ?></td>
+                                <td><? _e('State','hat'); ?>: <? the_official_state (); ?></td>
+                                <td><? _e('District','hat'); ?>: <? the_official_district (); ?></td>
                         </tbody>
                     </table>
                 </td>
                 <td>
-                    <table>
-                        <tr>
-                            <td>Office Phone 1</td>
-                            <td>555-555-5555</td>
-                        </tr>
-                        <tr>
-                            <td>Office Phone 1</td>
-                            <td>555-555-5555</td>
-                        </tr>
-                        <tr>
-                            <td>District Phone 1</td>
-                            <td>555-555-5555</td>
-                        </tr>
-                        <tr>
-                            <td>District Phone 1</td>
-                            <td>555-555-5555</td>
-                        </tr>
-                    </table>
+                    <? the_official_contact (); ?>
                 </td>
                 <td>
                     <span class="official-icon-ideology"></span>
@@ -134,13 +115,6 @@ $hat_officials_pagination = array (
                     <span class="official-icon-vote-convention"></span>
                 </td>
             </tr>
-		<? while (have_posts ()): the_post (); ?>
-			<tr>
-				<td>Ranking</td>
-				<td>Profile</td>
-				<td>Contact</td>
-				<td>Support</td>
-			</tr>
 		<? endwhile; ?>
 		</tbody>
 	</table>
