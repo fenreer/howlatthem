@@ -1,8 +1,6 @@
 
 <?
 
-if (!is_home () && !is_front_page ()) {return;}
-
 $args = array (
   'posts_per_page' => 1,
   'post__in'  => get_option( 'sticky_posts' ),

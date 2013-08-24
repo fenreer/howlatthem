@@ -1,5 +1,6 @@
-<? get_header (); ?>
-<? get_template_part ('loop', 'sticky'); ?>
-<? get_template_part ('loop', 'default'); ?>
-<? get_sidebar (); ?>
-<? get_footer (); ?>
+<?php get_header (); ?>
+<?php get_template_part ('loop', 'sticky'); ?>
+<?php get_template_part ('part', 'home'); ?>
+<?php get_template_part ('loop', 'officials'); ?>
+<?php get_sidebar (); ?>
+<?php get_footer (); ?>
