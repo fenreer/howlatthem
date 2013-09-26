@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="<? bloginfo ('language'); ?>">
+<html lang="<?php bloginfo ('language'); ?>">
 <head>
-  <title><? bloginfo ('name'); ?></title>
+  <title><?php bloginfo ('name'); ?></title>
   <meta charset='UTF-8'>
-  <meta name="description" content="<? bloginfo ('description'); ?>">
-  <meta name="keywords" content="<?= get_option ('hat-keywords', ''); ?>">
+  <meta name="description" content="<?php bloginfo ('description'); ?>">
+  <meta name="keywords" content="<?php echo get_option ('hat-keywords', ''); ?>">
   <meta name="robots" content="all">
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <? wp_head (); ?>
+  <?php wp_head (); ?>
 </head>
-<body <? body_class (); ?>>
-  <div class="container">
-    <div class="row">
-      <div class="span9">
-        <header id="header-main" class="row page-header">
-          <h1><a href="<?= site_url ();?>" title="<? bloginfo ('name'); ?>"><? bloginfo ('name'); ?></a></h1>
-          <h2><a href="<?= site_url ();?>" title="<? bloginfo ('name'); ?>"><? bloginfo ('description'); ?></a></h2>
-          <a id="banner" href="<?= site_url ();?>" title="<? bloginfo ('name'); ?>"><img src="<? header_image(); ?>" height="<?=get_custom_header()->height; ?>" width="<?= get_custom_header()->width; ?>" alt="" /></a>
-          <? if (is_user_logged_in ()): ?>
-            <? $user = wp_get_current_user (); ?>
-            <div id="welcome"><small><?= __('Welcome', 'hat'); ?> <?= $user->display_name; ?>!</small></div>
-          <? else: ?>
-            <div id="welcome"><small>
-              <a href="<?= wp_login_url (home_url ()); ?>" title="<? _e('Login', 'hat'); ?>"><? _e('Login', 'hat'); ?></a> <? _e('or', 'hat'); ?>
-              <a href="<?= site_url('/wp-login.php?action=register&redirect_to=' . home_url ()); ?>" title="<? _e('Register', 'hat'); ?>"><? _e('Register', 'hat');?></a>
-            </small></div>
-          <? endif; ?>
-        </header>
-        <nav id="main-nav">
-          <? wp_nav_menu (array ('theme_location' => 'main-nav')); ?>
-        </nav>
-        <div class="clearfix"></div>
+<body <?php body_class (); ?>>
 
+  <div class="navbar-wrapper">
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<?php echo home_url ('/'); ?>" title="<?php _e('Home Page', 'hat'); ?>"><?php bloginfo ('name'); ?></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <?php if (is_user_logged_in()): $user = wp_get_current_user();?>
+              <p class="navbar-text pull-right hidden-xs"><?php _e('Hello, ', 'hat'); ?><a href="#" class="navbar-link"><?php echo $user->user_login; ?></a></p>
+            <?php else: ?>
+              <form class="navbar-form navbar-right">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-default">Login</button>
+              </form>
+            <?php endif; ?>
+          </div>
+        </div><!-- navbar-nav -->
+      </div><!-- .navbar -->
+    </div><!-- .container -->
+  </div><!-- .navbar-wrapper -->
